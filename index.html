@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra Papel o Tijera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .permanent-marker-regular {
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex flex-col items-center justify-around relative h-screen gap-20 sm:gap-50 lg:flex-row">
+      <img class="absolute z-[-1] w-screen h-full sm:hidden" src="./img/fondoMovil.png" alt="">
+      <img class="absolute z-[-1] w-screen h-full hidden sm:flex lg:hidden" src="./img/fondoTablet.png" alt="">
+      <img class="absolute z-[-1] w-screen h-full max-h-screen hidden lg:block" src="./img/fondo.jpg" alt="">
+      <div class="absolute bottom-2 hidden lg:flex flex-col gap-2 permanent-marker-regular border-1 border-b-black shadow-xl w-[280px] p-4 items-center no-scrollbar bg-white ">
+        <h3>Historial</h3>
+        <div class="historial flex flex-col gap-2"></div>
+      </div>
+      <section class="text-center flex flex-col justify-center gap-4">
+        <div class="absolute left-8 flex flex-col gap-4">
+          <button id="btnPiedra" class="cursor-pointer">
+            <img width="50" src="./img/piedra.png" alt="">
+          </button>
+          <button id="btnPapel" class="cursor-pointer">
+            <img width="50" src="./img/papel.png" alt="">
+          </button>
+          <button id="btnTijera" class="cursor-pointer">
+            <img width="50" src="./img/tijera.png" alt="">
+          </button>
+        </div>
+        <h2 class="permanent-marker-regular">Juggador 1</h2>
+        <div class="h-[150px]">
+          <img id="jugador1" width="150" src="./img/transparente.png" alt="">
+        </div>
+        <div class="flex gap-5 permanent-marker-regular">
+          <div>
+            <h2>Ganadas</h2>
+            <p id="ganadasJ1">0</p>
+          </div>
+          <div>
+            <h2>Empates</h2>
+            <p id="empateJ1">0</p>
+          </div>
+        </div>
+      </section>
+      <section class="text-center flex flex-col justify-center gap-4 lg:flex-col-reverse">
+        <div class="absolute left-8 hidden sm:flex flex-col gap-2 permanent-marker-regular border-1 border-b-black shadow-xl w-[180px] p-4 items-center bg-white lg:hidden">
+          <h3>Historial</h3>
+          <div class="historial flex flex-col gap-2"></div>
+        </div>
+        <div class="flex gap-5 permanent-marker-regular">
+          <div>
+            <h2>Ganadas</h2>
+            <p id="ganadasJ2">0</p>
+          </div>
+          <div>
+            <h2>Empates</h2>
+            <p id="empateJ2">0</p>
+          </div>
+        </div>
+        <div class="h-[150px]">
+          <img id="jugador2" width="150" src="./img/transparente.png" alt="transparente">
+        </div>
+        <h2 class="permanent-marker-regular">Juggador 2</h2>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
